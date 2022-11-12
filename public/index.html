@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Socket Basico</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/slate/bootstrap.min.css" />
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand">Chat hosteado / Rodríguez García Luis Francisco</a>
+    </div>
+  </nav>
+
+  <div class="container my-3">
+    <div class="row">
+
+      <div class="col-sm-6 col-md-8 col-lg-8 col-xl-8">
+        <div class="card text-white bg-danger mb-3" style="max-width: 50rem;">
+          <div class="card-header"></div>
+          <div class="card-body">
+            <h4 class="card-title">Datos</h4>
+            <div class="form-floating mb-3">
+              <input type="text" id="usuario" class="form-control" id="floatingInput" placeholder="Usuario" required>
+            </div>
+            <div class="input-group mb-3">
+              <input type="text" id="mensaje" class="form-control" placeholder="Mensaje"
+                aria-label="Recipient's username" aria-describedby="button-addon2" required>
+              <button id="enviar" class="btn btn-info" type="button" id="button-addon2">Enviar</button>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-light mb-3" style="max-width: 50rem;">
+          <div class="card-header"></div>
+          <div class="card-body">
+            <h4 class="card-title">Chat</h4>
+            <p class="card-text">
+              <div id="salida">
+                <div id="avisos"></div>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+          <div class="card-header"></div>
+          <div class="card-body">
+            <h4 class="card-title">Usuarios</h4>
+            <p class="card-text">
+            <div id="notificaciones"></div>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="js/socket.io.js"></script>
+    <script src="js/logica.js" charset="utf-8"></script>
+</body>
+
+</html>
